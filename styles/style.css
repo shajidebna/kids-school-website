@@ -1,0 +1,70 @@
+/* nav related styles */
+.logo-text {
+    font-weight: 700;
+    font-size: 2rem;
+}
+ul li {
+    list-style: none;
+    
+}
+.list-item {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+#home {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: orange;
+}
+#about {
+    color: skyblue;
+}
+#facilities {
+    color: rgba(5, 212, 223, 1);
+}
+#admission {
+    color: rgba(93, 88, 239, 1);
+}
+.first-button {
+    color: rgba(255, 255, 255, 1);
+    background-color: orange;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 10px 60px;
+    border-radius: 12px;
+    border: none;
+}
+.bar {
+    display: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.items {
+    display: flex;
+    gap: 32px;
+    padding-left: 0;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* responsive media query */
+@media screen and (max-width: 576px) {
+    .logo-text,
+    .items,
+    .first-button {
+        display: none;
+    }
+    .bar {
+        display: inline;
+    }
+    .navbar {
+        border: 1px solid orange;
+        padding: 10px;
+    }
+}
