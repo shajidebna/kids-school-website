@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.quicksand-font {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
 /* nav related styles */
 .logo-text {
     font-weight: 700;
@@ -53,6 +60,63 @@ ul li {
     justify-content: space-between;
 }
 
+/* banner related styles */
+.banner-title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+}
+.banner-description {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+}
+.second-button {
+    color: rgba(255, 255, 255, 1);
+    background-color: black;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 10px 47px;
+    border-radius: 12px;
+    border: none;
+}
+.banner-info {
+    width: 640px;
+    padding-top: 120px;
+}
+.banner-profile {
+    width: 468px;
+    height: 575px;
+}
+.banner-profile img {
+    width: 100%;
+}
+.banner {
+    display: flex;
+    gap: 500px;
+    margin-top: 20px;
+}
+#empowering {
+    color: orange;
+}
+#toward {
+    color: skyblue;
+}
+
+/* standard curriculum related styles */
+.first-card {
+   background-image: linear-gradient(rgba(222, 245, 255, 1), white);
+}
+.card-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(32, 32, 32, 1);
+}
+.card-description {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgba(128, 128, 128, 1);
+}
+
 /* responsive media query */
 @media screen and (max-width: 576px) {
     .logo-text,
@@ -67,4 +131,18 @@ ul li {
         border: 1px solid orange;
         padding: 10px;
     }
+    .banner {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .banner-info {
+       text-align: center;
+       padding-top: 0;
+       width: 100%;
+    }
+    .banner-profile {
+        padding: 0;
+        width: 100%;
+    }
+   
 }
