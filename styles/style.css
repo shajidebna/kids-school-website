@@ -469,6 +469,7 @@ footer {
     }
     footer {
         padding: 20px;
+        margin-right: 0;
     }
     .feet h3 {
         margin-left: 0px;
