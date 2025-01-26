@@ -5,10 +5,9 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
-
-   .navbar, .banner, .card-section {
+header, .card-section, .story {
     padding: 0 120px;
-  }
+}
 
 /* nav related styles */
 .logo-text {
@@ -46,7 +45,7 @@ ul li {
     border-radius: 12px;
     border: none;
 }
-.bar {
+.bars {
     display: none;
 }
 .logo {
@@ -96,6 +95,7 @@ ul li {
     width: 100%;
 }
 .banner {
+    width: 1350px;
     display: flex;
     gap: 160px;
     margin-top: 20px;
@@ -183,8 +183,6 @@ ul li {
 
 /* our stories related styles */
 .story {
-    max-width: 100%;
-    padding: 50px 120px;
     background-image: 
     url(../assets/bg.png),
     linear-gradient(
@@ -200,14 +198,15 @@ ul li {
     margin-bottom: 80px;
 }
 .story-one {
-    max-width: 540px;
+    width: 540px;
     background-color: white;
     border-radius: 16px;
 }
 .story-one img {
+    width: 100%;
     border-radius: 16px 16px 0 0;
 }
-.card-one-button {
+.story-one-button {
     color: rgba(255, 255, 255, 1);
     background-color: rgba(60, 216, 232, 1);
     font-weight: 500;
@@ -215,9 +214,10 @@ ul li {
     padding: 15px 19px;
     border-radius: 47.93px;
     border: none;
-    margin-top: -100px;
     margin-left: 40px;
+    margin-top: -50px;
 }
+   
 .card-two-button {
     color: rgba(255, 255, 255, 1);
     background-color: rgba(149, 178, 38, 1);
@@ -258,23 +258,22 @@ ul li {
     padding: 10px 20px 20px 20px;
 }
 .story-two {
-    /* max-width: 290px; */
+    width: 290px;
     background-color: white;
     border-radius: 16px;
 }
 .story-two img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 16px 16px 0 0;
 }
 .new-card {
-    max-width: 601px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 60px;
+    gap: 70px;
 }
 .stories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    gap: 70px;
 }
 .story-button {
     color: rgba(255, 255, 255, 1);
@@ -287,7 +286,8 @@ ul li {
 }
 .view-button {
     text-align: center;
-    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 
@@ -295,56 +295,97 @@ ul li {
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
+    .item,
     .logo-text,
-    .items,
     .first-button,
-    .story-one
-    {
+    .icon,
+    .story-one {
         display: none;
     }
-
-    .navbar, .banner, .card-section {
-        padding: 0;
-      }
-    .bar {
+     .bars {
         display: inline;
     }
-    .navbar {
-        border: 1px solid orange;
-        padding: 10px;
+    header, .card-section, .story {
+        padding: 0;
+    }
+    .logo {
+        padding: 20px;
     }
     .banner {
+        width: 400px;
+        height: 800px;
         flex-direction: column-reverse;
         gap: 0;
     }
-    .banner .banner-title {
-        font-weight: 2rem;
-    }
     .banner-info {
-       text-align: center;
-       padding-top: 0;
-       width: 100%;
+        text-align: center;
+        width: 357px;;
+        padding: 20px;
+        margin: 0;
     }
     .banner-profile {
-        padding: 0;
+        width: 357px;
+    }
+    .banner-profile img {
         width: 100%;
+        padding: 20px;
+    }
+    .card-section {
+        width: 357px;
+        padding: 20px;
     }
     .card {
         flex-direction: column;
-        gap: 12px;
+        width: 357px;
     }
-    .card-section h2 {
-        font-size: 1.6rem;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-    .icon {
-        display: none;
+    .first-card, .second-card, .third-card{
+        padding: 28px;
     }
     .new-card {
-      gap: 5px;
+        width: 357px;
+        gap: 10px;
+    }
+    .story-two {
+        width: 173px;
     }
     .story {
-        padding: 10px;
+        width: 357px;
+        padding: 20px;
     }
-}
+    .view-button {
+        padding: 30px;
+    }
+    .navbar {
+        width: 375px;
+        border: 1px solid orange;
+        padding-right: 20px;
+    }
+    .banner-title {
+        font-size: 2rem;
+    }
+    .banner-description {
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+    .card-section h2 {
+        font-size: 1.8rem;
+        margin: 30px;
+    }
+    .story h2 {
+        font-size: 1.8rem;
+        margin: 30px;
+    }
+    .card-two-button, .card-three-button {
+        font-size: 0.7rem;
+        margin-left: 15px;
+    }
+    .second-button, .story-button {
+        font-size: 1rem;
+    }
+    .second-button {
+        padding: 10px 24px;
+    }
+    .story-button {
+        padding: 10px 35px;
+    }
+} 
