@@ -5,6 +5,9 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
+body {
+    margin: 0;
+}
 header, .card-section, .story {
     padding: 0 120px;
 }
@@ -441,6 +444,9 @@ footer {
     .card-section h2 {
         font-size: 1.8rem;
         margin: 30px;
+    }
+    body {
+        padding: 7px;
     }
     .story h2 {
         font-size: 1.8rem;
